@@ -46793,7 +46793,7 @@
 	        srtDescription: 'All faces of student together.',
 	        type: 'Pet Project',
 	        typeId: 'PET',
-	        imgs: ['src/img/projects/facesOfDaiict/hover.png', 'src/img/projects/facesOfDaiict/batch.png', 'src/img/projects/facesOfDaiict/course.png'],
+	        imgs: ['src/img/projects/facesOfDaiict/hover.jpg', 'src/img/projects/facesOfDaiict/batch.jpg', 'src/img/projects/facesOfDaiict/course.jpg'],
 	        description: ' <a target="_blank" href="http://faces-of-daiict.in/">Faces of Daiict</a> is the largest collection of student\'s profile pictures across all batches and courses. Now you can look at your all your batchmates photos at a single place. Take a trip down the memory lane.',
 	        link: 'http://faces-of-daiict.in/',
 	        techkeys: ['React', 'css3', 'javascript', 'webpack', 'npm', 'git', 'intellij']
