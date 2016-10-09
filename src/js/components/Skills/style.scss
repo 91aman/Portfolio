@@ -1,0 +1,150 @@
+$hexagonColor: #424242;
+$hexagonBackColor: #eee;
+$hexagonHeight: 75px;
+$hexagonWidth: 1.73 * $hexagonHeight;
+
+.ss-body:after {
+  display: block;
+  content: " ";
+  clear: both;
+}
+
+.somethins:after {
+  display: block;
+  content: " ";
+  clear: both;
+}
+
+.section .ss-sep{
+  width: 135px;
+  margin: 10px auto 100px;
+}
+
+.skills-cont-wrap {
+  height: 2 * $hexagonHeight;
+  margin: 1px;
+  float: left;
+  width: $hexagonWidth;
+  position: relative;
+  cursor: pointer;
+
+  &:after {
+    display: block;
+    content: " ";
+    clear: both;
+  }
+
+  &.shift {
+    transform: translate(50%, -25%);
+  }
+
+  &:hover {
+    .skills-cont.front {
+      -webkit-transform: translateY(-50%) rotateY(180deg);
+      -moz-transform: translateY(-50%) rotateY(180deg);
+      -o-transform: translateY(-50%) rotateY(180deg);
+      transform: translateY(-50%) rotateY(180deg);
+    }
+
+    .skills-cont.back {
+      -webkit-transform: translateY(-50%) rotateY(0deg);
+      -moz-transform: translateY(-50%) rotateY(0deg);
+      -o-transform: translateY(-50%) rotateY(0deg);
+      transform: translateY(-50%) rotateY(0deg);
+    }
+  }
+}
+
+.skills-cont {
+  width: $hexagonWidth;
+  height: $hexagonHeight;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  text-align: center;
+  font-size: 25px;
+  position: absolute;
+
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  -webkit-transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+  // -webkit-transform: rotateY(0deg);
+
+  &.front {
+    background: $hexagonColor;
+    transform: translateY(-50%) rotateY(0deg);
+    .skill-label {
+      color: $hexagonBackColor;
+    }
+  }
+
+  &.back {
+    background: $hexagonBackColor;
+    transform: translateY(-50%) rotateY(-180deg);
+
+    &:before {
+      border-bottom-color: $hexagonBackColor;
+    }
+
+    &:after {
+      border-top-color: $hexagonBackColor;
+    }
+
+    .skill-label {
+      color: $hexagonColor;
+    }
+  }
+}
+
+.skills-cont:before {
+  content: "";
+  position: absolute;
+  top: -0.5 * $hexagonHeight;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 0.5*$hexagonWidth solid transparent;
+  border-right: 0.5*$hexagonWidth solid transparent;
+  border-bottom: 0.5*$hexagonHeight solid $hexagonColor;
+}
+
+.skills-cont:after {
+  content: "";
+  position: absolute;
+  bottom: (-0.5 * $hexagonHeight) + 1;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 0.5*$hexagonWidth solid transparent;
+  border-right: 0.5*$hexagonWidth solid transparent;
+  border-top: 0.5*$hexagonHeight solid $hexagonColor;
+}
+
+.skill-logo {
+  height: 0.5 * $hexagonHeight;
+  width: 0.5 * $hexagonHeight;
+  margin: auto;
+}
+
+.skill-label {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.skill-link {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.ss-body{
+  max-width: 950px;
+  margin: auto;
+}
+

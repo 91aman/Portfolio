@@ -1,0 +1,26 @@
+.section.about-section {
+  padding: 100px 300px;
+
+  .as-body {
+    color: #999;
+    font-size: 19px;
+    font-weight: 100;
+    line-height: 30px;
+  }
+
+  a {
+    color: #ddd;
+    cursor: pointer;
+    padding: 2px;
+    text-decoration: none;
+    transition: all 500ms ease;
+
+    &:hover {
+      background: #fff;
+      color: #444;
+    }
+  }
+}
+
+
+

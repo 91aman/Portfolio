@@ -1,0 +1,28 @@
+{
+  "name": "Site",
+  "version": "1.0.0",
+  "description": "Personal website created using react and webpack",
+  "author": "Aman Jain",
+  "devDependencies": {
+    "babel-core": "^6.3.13",
+    "babel-loader": "^6.2.0",
+    "webpack": "^1.12.9",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-es2015": "^6.3.13",
+    "react-tap-event-plugin": "^0.2.1",
+    "material-ui": "^0.14.0-rc1",
+    "lodash": "^3.10.1",
+    "style-loader": "^0.13.0",
+    "css-loader": " ^0.23.0",
+    "sass-loader": "^3.1.2",
+    "jquery": "^2.1.4",
+    "react-dom": "^0.14.3",
+    "classnames": "^v2.2.3",
+    "reflux": "0.3.0",
+    "svg-react-loader": "^0.3.2",
+    "react": "^0.14.7",
+    "url-loader": "^0.5.7",
+    "react-slick": "^0.14.5",
+    "balloon-css": "^0.3.0"
+  }
+}

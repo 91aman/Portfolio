@@ -1,0 +1,133 @@
+.project-fs {
+  .psd-section {
+    width: 100%;
+  }
+
+  .psd-sep {
+    width: 100px;
+  }
+  .psdb {
+    color: #eee;
+    display: inline-block;
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100%;
+    overflow: auto;
+
+  }
+
+  .psdb-image:not(:last-child) {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #eee;
+  }
+
+  .psdb-left {
+    border-right: 1px solid #eee;
+  }
+
+  .psd-section {
+    height: 100%;
+  }
+
+  .psd-body {
+    height: calc(100% - 100px);
+  }
+
+  .psdb-right {
+    text-align: left;
+    font-weight: 100;
+    line-height: 30px;
+    font-size: 19px;
+    color: #999;
+
+    a {
+      color: #ddd;
+      text-decoration: none;
+      padding: 2px;
+      transition: all 500ms ease;
+      cursor: pointer;
+
+      &:hover {
+        background: #fff;
+        color: #444;
+      }
+    }
+
+    .link, .tech {
+      margin: 20px 0;
+    }
+  }
+
+  .tech-list-item {
+    display: inline-block;
+    border: 2px solid #424242;
+    cursor: pointer;
+    transition: all 500ms ease;
+    margin: 3px;
+
+    &:hover {
+      border-color: #eee;
+
+      .title {
+        border-left-color: #eee;
+      }
+    }
+
+    .icon {
+      height: 30px;
+      width: 30px;
+      float: left;
+    }
+
+    .title {
+      transition: all 500ms ease;
+      line-height: 30px;
+      padding: 0 8px;
+      border-left: 2px solid #424242;
+      float: left;
+      background: #424242;
+    }
+  }
+
+  .slick-arrow {
+    height: 65px !important;
+    width: 65px !important;
+    fill: #eee !important;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    border-radius: 50%;
+    position: absolute;
+
+    &:hover {
+      fill: #444 !important;
+      background: #eee;
+    }
+  }
+
+  .slick-next {
+    right: 30px;
+  }
+
+  .slick-prev {
+    left: 30px;
+  }
+
+  .psd-slider {
+    height: 100%;
+  }
+
+  .slick-list {
+    height: 100%;
+  }
+
+  .slick-dots {
+    bottom: 0;
+  }
+
+  .slick-track {
+    height: 100%;
+  }
+}

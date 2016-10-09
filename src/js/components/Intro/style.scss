@@ -1,0 +1,150 @@
+.intro-background {
+  background: #212121;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.intro-svg {
+  min-height: 100%;
+  min-width: 100%;
+}
+
+@keyframes rotate360 {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  100% {
+    transform: rotate(360deg) scale(1.5);
+  }
+}
+
+@keyframes rotate180 {
+  0% {
+    transform: rotate(0deg) scale(1.25);
+  }
+
+  100% {
+    transform: rotate(180deg) skewX(1);
+  }
+}
+
+@keyframes rotate90 {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  100% {
+    transform: rotate(90deg) scale(1.5);
+  }
+}
+
+polygon {
+  fill: white;
+  opacity: 0.1;
+  transform-origin: center center;
+  backface-visibility: hidden;
+  animation: rotate360 30s linear infinite alternate-reverse;
+
+  &:nth-child(2n) {
+    animation-name: rotate180;
+    animation-duration: 15s;
+    animation-direction: alternate;
+  }
+
+  &:nth-child(3n) {
+    animation-name: rotate90;
+    animation-duration: 10s;
+  }
+
+  &:nth-child(5n) {
+    animation-duration: 30s;
+    animation-direction: alternate-reverse;
+  }
+}
+
+.intro-content {
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+.intro-image-cont {
+  height: 150px;
+  margin: auto;
+  width: 150px;
+}
+
+.intro-line-seperator {
+  margin: 15px auto;
+  width: 350px;
+}
+
+.intro-image {
+  border: 5px solid #616161;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+}
+
+.intro-title {
+  color: #fafafa;
+  font-size: 25px;
+  margin-top: 25px;
+}
+
+.intro-list {
+  margin-bottom: 60px;
+}
+
+.intro-list-item {
+  color: #F5F5F5;
+  display: inline-block;
+  padding: 0 5px;
+  .link {
+    color: #E0E0E0;
+  }
+}
+
+.intro-btn {
+  border: 2px solid #E0E0E0;
+  color: #E0E0E0;
+  cursor: pointer;
+  letter-spacing: 1px;
+  padding: 10px;
+  transition: all 500ms ease;
+
+  &:hover {
+    background: #eee;
+    color: #424242;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .intro-image-cont {
+    height: 175px;
+    width: 175px;
+  }
+
+  .intro-title {
+    font-size: 30px;
+  }
+
+}
+
+@media screen and (min-width: 1200px) {
+  .intro-image-cont {
+    height: 200px;
+    width: 200px;
+  }
+
+  .intro-title {
+    font-size: 40px;
+  }
+}
