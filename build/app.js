@@ -19890,7 +19890,7 @@
 	            var navOpen = _state.navOpen;
 	            var activeSection = _state.activeSection;
 	            var screenSize = _state.screenSize;
-	            var isScreenSizeLarge = false; // screenSize === ScreenSizes.LARGE;
+	            var isScreenSizeLarge = screenSize === _screenSizes2.default.LARGE;
 	            return _react2.default.createElement(
 	                'div',
 	                { className: 'h-full main-container', ref: 'scroll-container' },

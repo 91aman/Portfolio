@@ -75,7 +75,7 @@ class App extends Component {
 
     render() {
         const {navOpen, activeSection, screenSize} = this.state,
-            isScreenSizeLarge = false ;// screenSize === ScreenSizes.LARGE;
+            isScreenSizeLarge = screenSize === ScreenSizes.LARGE;
         return (
             <div className="h-full main-container" ref="scroll-container">
                 { !isScreenSizeLarge && <NavMenuBtn
