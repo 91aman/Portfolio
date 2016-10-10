@@ -2,15 +2,16 @@ import React, {Component, PropTypes} from 'react';
 import {partial} from 'lodash';
 import Sections from '../../constants/sections';
 import cx from 'classnames';
+import ScreenSizes from '../../constants/screenSizes';
 
 import Style from './style.scss';
 
 class About extends Component {
     render() {
-        const {active, onSectionClick} = this.props;
+        const {active, onSectionClick,screenSize } = this.props;
         return (
             <section className="section about-section">
-                <div className="section-container">
+                <div className={cx({"section-container" : true || screenSize === ScreenSizes.LARGE})}>
                     <div className={`section-header as-header animated ${active ? 'fadeInUp' : 'fadeOutDown'}`}>
                         Hello World !
                     </div>
@@ -28,7 +29,8 @@ class About extends Component {
 
                         I enjoy turning complex problems into most maintainable, reusable components to create
                         pixel-perfect interfaces and intuitive user experiences across all devices.
-                        <p> Keep scrolling down to know my <a onClick={partial(onSectionClick, Sections["projects"].key)}>projects</a>,
+                        <p> Keep scrolling down to know my <a
+                            onClick={partial(onSectionClick, Sections["projects"].key)}>projects</a>,
                             my <a onClick={partial(onSectionClick, Sections["experience"].key)}>Experience</a>,
                             my <a onClick={partial(onSectionClick, Sections["skills"].key)}>Skills</a> and to
                             <a onClick={partial(onSectionClick, Sections["contact"].key)}> get in touch</a>.

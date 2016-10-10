@@ -1,3 +1,8 @@
+.section.contact-section{
+  .cs-sep{
+    width: 195px;
+  }
+}
 .mailto {
   color: #eee;
   padding: 7px;
@@ -16,11 +21,10 @@
 .sc-item {
   background: #424242;
   cursor: pointer;
-  display: inline-block;
-  margin: 0 3px;
   padding: 10px;
   transition: all 500ms ease;
-  width: 80px;
+  width: 150px;
+  margin: 10px auto;
 
   &:hover {
     background: #eee;
@@ -35,4 +39,21 @@
   color: #eee;
   text-transform: capitalize;
   transition: all 500ms ease;
+}
+
+@media screen and (min-width: 900px) {
+  .section.contact-section{
+    .cs-sep{
+      width: 300px;
+    }
+  }
+
+  .sc-item{
+    display: inline-block;
+    margin: 0 3px;
+    width: 80px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
 }

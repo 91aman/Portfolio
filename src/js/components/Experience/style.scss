@@ -1,21 +1,21 @@
 .work-section {
   .ws-sep {
-    width: 240px;
-    margin: 10px auto 100px;
+    width: 155px;
   }
+
   .ws-body {
     margin: auto;
     position: relative;
     text-align: left;
-    width: 1000px;
+    width: 100%;
+    max-width: 1000px;
 
     &:before {
       background: #4CAF50;
       content: '';
       height: 100%;
-      left: 50%;
+      left: 0;
       position: absolute;
-      transform: translateX(-50%);
       top: 0;
       width: 4px;
     }
@@ -26,51 +26,51 @@
     border-radius: 50%;
     height: 18px !important;
     fill: #fff;
-    left: 50%;
-    padding: 15px;
+    left: -16px;
+    padding: 10px;
     position: absolute;
-    transform: translateX(-50%);
     width: 18px !important;
   }
 
   .work-date {
     color: #eee;
-    font-size: 13px;
+    font-size: 10px;
     position: absolute;
-    top: 13px;
     width: 200px;
+    right: 10px;
+    top: 15px;
+    text-align: right;
   }
 
   .work-c-name {
     color: #eee;
-    font-size: 20px;
+    font-size: 16px;
     margin-bottom: 7px;
   }
 
   .work-c-position {
     color: #E0E0E0;
-    font-size: 14px;
+    font-size: 13px;
     margin: 7px 0;
   }
 
   .work-c-desc {
     color: #BDBDBD;
     letter-spacing: 0.5px;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 300;
   }
 
   .work-card {
-    padding: 20px;
+    padding: 10px;
     position: relative;
-    width: 45%;
-
+    width: calc(100% - 40px);
     &:before {
       border: 7px solid transparent;
       content: '';
       height: 0;
       position: absolute;
-      top: 12px;
+      top: 8px;
       width: 0;
     }
   }
@@ -84,31 +84,82 @@
       content: " ";
       clear: both;
     }
-    &:nth-of-type(odd) {
-      .work-date {
-        left: 122.22%;
-      }
-      .work-card {
 
-        &:before {
-          border-left: 7px solid #424242;
-          left: 101%;
-        }
+    .work-card {
+      float: right;
+
+      &:before {
+        border-right: 7px solid #424242;
+        right: 101%;
       }
     }
-    &:nth-of-type(even) {
-      .work-date {
-        right: 122.22%;
-        text-align: right;
-      }
-      .work-card {
-        float: right;
+  }
+}
 
-        &:before {
-          border-right: 7px solid #424242;
-          right: 101%;
+@media screen and (min-width: 900px) {
+  .work-section {
+    .ws-sep {
+      width: 240px;
+      margin: 10px auto 100px;
+    }
+
+    .ws-body {
+      &:before {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    .work-c-name {
+      font-size: 20px;
+    }
+
+    .work-c-position {
+      font-size: 14px;
+    }
+
+    .work-c-desc {
+      font-size: 13px;
+    }
+
+    .work-icon {
+      padding: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .work-date {
+      font-size: 13px;
+      right: 122.22%;
+      top: 13px;
+    }
+
+    .work-card {
+      padding: 20px;
+      width: calc(50% - 45px);
+      &:before {
+        top: 12px;
+      }
+    }
+
+    .work-card-container {
+      &:nth-of-type(odd) {
+        .work-date {
+          left: 122.22%;
+          text-align: left;
+        }
+        .work-card {
+          float: left;
+          &:before {
+            border-left: 7px solid #424242;
+            left: 101%;
+            border-right: 0;
+          }
         }
       }
     }
   }
+}
+
+@media screen and (min-width: 1200px) {
 }

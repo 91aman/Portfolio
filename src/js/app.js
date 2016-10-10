@@ -11,6 +11,7 @@ import NavMenu from './components/NavMenu';
 import NavMenuBtn from './components/NavMenuBtn';
 import Navigation from './components/Navigation';
 import Sections from './constants/sections';
+import ScreenSizes from './constants/screenSizes';
 import Styles from './style.scss';
 
 
@@ -73,20 +74,24 @@ class App extends Component {
     }
 
     render() {
-        const {navOpen, activeSection} = this.state;
+        const {navOpen, activeSection, screenSize} = this.state,
+            isScreenSizeLarge = false ;// screenSize === ScreenSizes.LARGE;
         return (
             <div className="h-full main-container" ref="scroll-container">
-                {/*<NavMenuBtn
-                 navOpen={navOpen}
-                 onNavBtnClick={() => {
-                 this.setState({navOpen : !navOpen})
+                { !isScreenSizeLarge && <NavMenuBtn
+                    navOpen={navOpen}
+                    onNavBtnClick={() => {
+                        this.setState({navOpen : !navOpen})
                  }}
-                 />
-                 <NavMenu open={navOpen}/>*/}
-                <Navigation
+                />}
+                {!isScreenSizeLarge && <NavMenu
+                    open={navOpen}
+                    onClick={(section) => {this.navigateToSelection(section);  this.setState({navOpen : !navOpen});}}
+                />}
+                { isScreenSizeLarge && <Navigation
                     onClick={(section) => this.navigateToSelection(section)}
                     activeSection={activeSection}
-                />
+                />}
                 {
                     SectionArray.map((sectionKey) => {
                         const SectionComponent = Sections[sectionKey].component;
@@ -94,6 +99,7 @@ class App extends Component {
                         return <SectionComponent
                             key={sectionKey}
                             ref={sectionKey}
+                            screenSize={screenSize}
                             active={activeSection === sectionKey}
                             onSectionClick={(section) => this.navigateToSelection(section)}
                         />
@@ -107,7 +113,9 @@ class App extends Component {
         const refsObj = this.refs,
             scrollContainer = this.refs['scroll-container'],
             calculateDimensions = () => {
-                let topHeight = 0;
+                let topHeight = 0,
+                    screenSize = 'large',
+                    windowInnerWidth = window.innerWidth;
                 SectionArray.forEach((ref, iter) => {
                     if (!iter) {
                         topDetails[ref] = 0;
@@ -118,6 +126,17 @@ class App extends Component {
                         topDetails[ref] = topHeight;
                     }
                 });
+
+
+                if (windowInnerWidth <= 900) {
+                    screenSize = ScreenSizes.SMALL
+                } else if (windowInnerWidth <= 1200) {
+                    screenSize = ScreenSizes.MEDIUM
+                }
+
+                console.log(screenSize);
+
+                this.setState({screenSize});
             };
 
         calculateDimensions();

@@ -1,7 +1,41 @@
 $hexagonColor: #424242;
 $hexagonBackColor: #eee;
-$hexagonHeight: 75px;
-$hexagonWidth: 1.73 * $hexagonHeight;
+//$hexagonHeight: 40px;
+//$hexagonWidth: 1.73 * $hexagonHeight;
+
+@mixin HexagonSize( $hexagonHeight: 75px) {
+  $hexagonWidth: 1.73 * $hexagonHeight;
+
+  .skills-cont-wrap {
+    height: 2 * $hexagonHeight;
+    width: $hexagonWidth;
+  }
+
+  .skills-cont {
+    width: $hexagonWidth;
+    height: $hexagonHeight;
+  }
+
+  .skills-cont:before {
+    top: -0.5 * $hexagonHeight;
+    border-left: 0.5*$hexagonWidth solid transparent;
+    border-right: 0.5*$hexagonWidth solid transparent;
+    border-bottom: 0.5*$hexagonHeight solid $hexagonColor;
+  }
+
+  .skills-cont:after {
+    bottom: (-0.5 * $hexagonHeight) + 1;
+    border-left: 0.5*$hexagonWidth solid transparent;
+    border-right: 0.5*$hexagonWidth solid transparent;
+    border-top: 0.5*$hexagonHeight solid $hexagonColor;
+  }
+
+  .skill-logo {
+    height: 0.5 * $hexagonHeight;
+    width: 0.5 * $hexagonHeight;
+  }
+}
+
 
 .ss-body:after {
   display: block;
@@ -15,16 +49,17 @@ $hexagonWidth: 1.73 * $hexagonHeight;
   clear: both;
 }
 
-.section .ss-sep{
-  width: 135px;
-  margin: 10px auto 100px;
+.section .ss-sep {
+  width: 95px;
 }
 
+@include HexagonSize(50px);
+
 .skills-cont-wrap {
-  height: 2 * $hexagonHeight;
+  //height: 2 * $hexagonHeight;
   margin: 1px;
   float: left;
-  width: $hexagonWidth;
+  //width: $hexagonWidth;
   position: relative;
   cursor: pointer;
 
@@ -56,8 +91,8 @@ $hexagonWidth: 1.73 * $hexagonHeight;
 }
 
 .skills-cont {
-  width: $hexagonWidth;
-  height: $hexagonHeight;
+  //width: $hexagonWidth;
+  //height: $hexagonHeight;
   top: 50%;
   left: 0;
   transform: translateY(-50%);
@@ -103,35 +138,35 @@ $hexagonWidth: 1.73 * $hexagonHeight;
 .skills-cont:before {
   content: "";
   position: absolute;
-  top: -0.5 * $hexagonHeight;
+  // top: -0.5 * $hexagonHeight;
   left: 0;
   width: 0;
   height: 0;
-  border-left: 0.5*$hexagonWidth solid transparent;
-  border-right: 0.5*$hexagonWidth solid transparent;
-  border-bottom: 0.5*$hexagonHeight solid $hexagonColor;
+  //border-left: 0.5*$hexagonWidth solid transparent;
+  //border-right: 0.5*$hexagonWidth solid transparent;
+  //border-bottom: 0.5*$hexagonHeight solid $hexagonColor;
 }
 
 .skills-cont:after {
   content: "";
   position: absolute;
-  bottom: (-0.5 * $hexagonHeight) + 1;
+  // bottom: (-0.5 * $hexagonHeight) + 1;
   left: 0;
   width: 0;
   height: 0;
-  border-left: 0.5*$hexagonWidth solid transparent;
-  border-right: 0.5*$hexagonWidth solid transparent;
-  border-top: 0.5*$hexagonHeight solid $hexagonColor;
+  //border-left: 0.5*$hexagonWidth solid transparent;
+  //border-right: 0.5*$hexagonWidth solid transparent;
+  //border-top: 0.5*$hexagonHeight solid $hexagonColor;
 }
 
 .skill-logo {
-  height: 0.5 * $hexagonHeight;
-  width: 0.5 * $hexagonHeight;
+  //height: 0.5 * $hexagonHeight;
+  //width: 0.5 * $hexagonHeight;
   margin: auto;
 }
 
 .skill-label {
-  font-size: 18px;
+  font-size: 12px;
   margin-top: 10px;
 }
 
@@ -143,8 +178,25 @@ $hexagonWidth: 1.73 * $hexagonHeight;
   left: 0;
 }
 
-.ss-body{
+.ss-body {
   max-width: 950px;
   margin: auto;
+}
+
+
+@media screen and (min-width: 900px) {
+  @include HexagonSize();
+
+  .skill-label{
+    font-size: 18px;
+  }
+
+  .section .ss-sep {
+    width: 135px;
+    margin: 10px auto 100px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
 }
 

@@ -16,10 +16,12 @@ import Styles from './style.scss';
 
 class NavMenu extends Component {
     render() {
-        var ListItemEl = _.map(Sections, (section, key) => {
+        const {onClick} = this.props,
+             ListItemEl = Object.keys(Sections).map((key) => {
+            const section = Sections[key];
 
             return <ListItem
-                primaryText={section.title}
+                primaryText={section.label}
                 leftIcon={<section.icon style={{
                 fill: "#fff",
                 padding: '16px',
@@ -32,7 +34,7 @@ class NavMenu extends Component {
                 margin: '10px'
             }}
                 key={key}
-                onClick={_.partial(() => {}, key)}
+                onClick={() => {onClick(key)}}
             />
         });
         return (
@@ -41,30 +43,27 @@ class NavMenu extends Component {
                     open: this.props.open
                 }
             )}>
-                <div className="overlay-section"/>
-                <div className="overlay-section">
-                    <nav className="overlay-menu">
-                        <List style={{
-                            background: '#FF5252',
+                <nav className="overlay-menu">
+                    <List style={{
+                            background: '#2E7D32',
                             position: 'relative',
                             top: '50%',
                             transform: 'translateY(-50%)'
                         }}>
-                            {ListItemEl}
-                        </List>
-                    </nav>
-                </div>
+                        {ListItemEl}
+                    </List>
+                </nav>
             </div>
         );
     }
 }
 
 NavMenu.propTypes = {
-    open : PropTypes.bool
+    open: PropTypes.bool
 };
 
 NavMenu.defaultProps = {
-    open : false
+    open: false
 };
 
 export default NavMenu;

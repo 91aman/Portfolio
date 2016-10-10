@@ -21,7 +21,7 @@ class NavMenuBtn extends Component {
                 })}
                 onClick={props.onNavBtnClick}
             >
-                <FloatingActionButton>
+                <FloatingActionButton backgroundColor={'#4CAF50'}>
                     <div className="nav-btn-icn">
                         <span className="top btn-line"/>
                         <span className="middle btn-line"/>
@@ -33,7 +33,7 @@ class NavMenuBtn extends Component {
     }
 }
 
-NavMenuBtn.propTypes= {
+NavMenuBtn.propTypes = {
     navOpen: PropTypes.bool,
     onNavBtnClick: PropTypes.func
 };

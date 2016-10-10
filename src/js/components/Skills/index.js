@@ -1,4 +1,5 @@
 import React, {Component, PropTypes} from 'react';
+import ReactDom from 'react-dom';
 import cx from 'classnames';
 import SkillsConstants from './Skills';
 import Styles from './style.scss';
@@ -34,7 +35,7 @@ class Skills extends Component {
                         Skills
                     </div>
                     <hr className={`section-sep ss-sep anim-delay-1 ${active ? 'fade-in' : 'fade-out'}`}/>
-                    <div className="ss-body">
+                    <div ref="ss-body" className="ss-body">
                         {PARSED_SKILLS.map((skillsArr, iter)=> {
                             return (
                                 <div className="somethins" key={iter} style={{
@@ -77,6 +78,12 @@ class Skills extends Component {
                 </div>
             </section>
         );
+    }
+
+    componentDidMount() {
+        window.addEventListener("resize", _.debounce(() => {
+            console.log(ReactDom.findDOMNode(this.refs['ss-body']).clientWidth)
+        }, 250));
     }
 }
 

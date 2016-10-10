@@ -83,7 +83,6 @@ polygon {
 
 .intro-line-seperator {
   margin: 15px auto;
-  width: 350px;
 }
 
 .intro-image {
@@ -101,12 +100,13 @@ polygon {
 
 .intro-list {
   margin-bottom: 60px;
+  font-size: 14px;
 }
 
 .intro-list-item {
   color: #F5F5F5;
-  display: inline-block;
   padding: 0 5px;
+  display: inline-block;
   .link {
     color: #E0E0E0;
   }
@@ -136,6 +136,14 @@ polygon {
     font-size: 30px;
   }
 
+  .intro-line-seperator {
+    margin: 15px auto;
+    width: 350px;
+  }
+
+  .intro-list {
+    font-size: 16px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
