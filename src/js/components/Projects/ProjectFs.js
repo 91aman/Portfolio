@@ -22,11 +22,11 @@ const ProjectDetailComp = (projectDetails) => {
     const {link, imgs, techkeys} = projectDetails;
 
     return <section className="section psd-section">
-        <div className={cx("section-header as-header fadeInUp animated" )}>{projectDetails.title}</div>
+        <div className={cx("section-header as-header fadeInUp animated")}>{projectDetails.title}</div>
         <hr className="section-sep psd-sep"/>
         <div className="section-body psd-body">
             <div className="psdb psdb-left">
-                {imgs.map((url, iter)=> {
+                {imgs.map((url, iter) => {
                     return (
                         <div className="psdb-image" key={iter}>
                             <img src={url}/>
@@ -35,7 +35,7 @@ const ProjectDetailComp = (projectDetails) => {
                 })}
             </div>
             <div className="psdb psdb-right">
-                <div className="desc" dangerouslySetInnerHTML={{__html : projectDetails.description}}/>
+                <div className="desc" dangerouslySetInnerHTML={{__html: projectDetails.description}}/>
                 {link && <div className="link">
                     <a target="_blank" href={link}>{link}</a>
                 </div>
@@ -66,11 +66,12 @@ class ProjectFs extends Component {
             <div className="section-fs project-fs">
                 <div className="fs-close" onClick={this.props.onClose}>
                     <Close style={{
-                        height:'50px',
-                        width : '50px'
+                        height: '50px',
+                        width: '50px'
                     }}/>
                 </div>
-                <Slider {...sliderSettings}>
+                <Slider {...sliderSettings}
+                        initialSlide={this.props.selectedSlide}>
                     {
                         Object.keys(Projects).map((projectKey) => {
                             const projectDetails = Projects[projectKey];

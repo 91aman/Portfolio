@@ -19955,14 +19955,12 @@
 	                    screenSize = _screenSizes2.default.MEDIUM;
 	                }
 
-	                console.log(screenSize);
-
 	                _this3.setState({ screenSize: screenSize });
 	            };
 
 	            calculateDimensions();
 
-	            scrollContainer.addEventListener('scroll', function () {
+	            scrollContainer.addEventListener('scroll', _lodash2.default.debounce(function () {
 	                var scrollTop = scrollContainer.scrollTop,
 	                    activeSection = _this3.state.activeSection;
 	                var refInView = void 0;
@@ -19978,11 +19976,11 @@
 	                if (activeSection !== refInView) {
 	                    _this3.setState({ activeSection: refInView });
 	                }
-	            });
+	            }, 10));
 
 	            window.addEventListener("resize", _lodash2.default.debounce(function () {
 	                calculateDimensions();
-	            }, 250));
+	            }, 500));
 	        }
 	    }]);
 
@@ -42430,7 +42428,7 @@
 	                    _react2.default.createElement(
 	                        'div',
 	                        { className: 'intro-image-cont anim-delay-1 fade-in' },
-	                        _react2.default.createElement('img', { className: 'intro-image', src: 'src/img/introImg.jpg' })
+	                        _react2.default.createElement('img', { className: 'intro-image', src: 'src/img/introImg2.png' })
 	                    ),
 	                    _react2.default.createElement(
 	                        'div',
@@ -46149,7 +46147,7 @@
 
 
 	// module
-	exports.push([module.id, ".intro-background {\n  background: #212121;\n  bottom: 0;\n  left: 0;\n  overflow: hidden;\n  position: absolute;\n  right: 0;\n  top: 0; }\n\n.intro-svg {\n  min-height: 100%;\n  min-width: 100%; }\n\n@keyframes rotate360 {\n  0% {\n    transform: rotate(0deg) scale(1); }\n  100% {\n    transform: rotate(360deg) scale(1.5); } }\n\n@keyframes rotate180 {\n  0% {\n    transform: rotate(0deg) scale(1.25); }\n  100% {\n    transform: rotate(180deg) skewX(1); } }\n\n@keyframes rotate90 {\n  0% {\n    transform: rotate(0deg) scale(1); }\n  100% {\n    transform: rotate(90deg) scale(1.5); } }\n\npolygon {\n  fill: white;\n  opacity: 0.1;\n  transform-origin: center center;\n  backface-visibility: hidden;\n  animation: rotate360 30s linear infinite alternate-reverse; }\n  polygon:nth-child(2n) {\n    animation-name: rotate180;\n    animation-duration: 15s;\n    animation-direction: alternate; }\n  polygon:nth-child(3n) {\n    animation-name: rotate90;\n    animation-duration: 10s; }\n  polygon:nth-child(5n) {\n    animation-duration: 30s;\n    animation-direction: alternate-reverse; }\n\n.intro-content {\n  position: absolute;\n  top: 50%;\n  text-align: center;\n  transform: translateY(-50%);\n  width: 100%; }\n\n.intro-image-cont {\n  height: 150px;\n  margin: auto;\n  width: 150px; }\n\n.intro-line-seperator {\n  margin: 15px auto; }\n\n.intro-image {\n  border: 5px solid #616161;\n  border-radius: 50%;\n  height: 100%;\n  width: 100%; }\n\n.intro-title {\n  color: #fafafa;\n  font-size: 25px;\n  margin-top: 25px; }\n\n.intro-list {\n  margin-bottom: 60px;\n  font-size: 14px; }\n\n.intro-list-item {\n  color: #F5F5F5;\n  padding: 0 5px;\n  display: inline-block; }\n  .intro-list-item .link {\n    color: #E0E0E0; }\n\n.intro-btn {\n  border: 2px solid #E0E0E0;\n  color: #E0E0E0;\n  cursor: pointer;\n  letter-spacing: 1px;\n  padding: 10px;\n  transition: all 500ms ease; }\n  .intro-btn:hover {\n    background: #eee;\n    color: #424242; }\n\n@media screen and (min-width: 900px) {\n  .intro-image-cont {\n    height: 175px;\n    width: 175px; }\n  .intro-title {\n    font-size: 30px; }\n  .intro-line-seperator {\n    margin: 15px auto;\n    width: 350px; }\n  .intro-list {\n    font-size: 16px; } }\n\n@media screen and (min-width: 1200px) {\n  .intro-image-cont {\n    height: 200px;\n    width: 200px; }\n  .intro-title {\n    font-size: 40px; } }\n", ""]);
+	exports.push([module.id, ".intro-background {\n  background: #212121;\n  bottom: 0;\n  left: 0;\n  overflow: hidden;\n  position: absolute;\n  right: 0;\n  top: 0; }\n\n.intro-svg {\n  min-height: 100%;\n  min-width: 100%; }\n\n@keyframes rotate360 {\n  0% {\n    transform: rotate(0deg) scale(1); }\n  100% {\n    transform: rotate(360deg) scale(1.5); } }\n\n@keyframes rotate180 {\n  0% {\n    transform: rotate(0deg) scale(1.25); }\n  100% {\n    transform: rotate(180deg) skewX(1); } }\n\n@keyframes rotate90 {\n  0% {\n    transform: rotate(0deg) scale(1); }\n  100% {\n    transform: rotate(90deg) scale(1.5); } }\n\npolygon {\n  fill: white;\n  opacity: 0.1;\n  transform-origin: center center;\n  backface-visibility: hidden;\n  animation: rotate360 30s linear infinite alternate-reverse; }\n  polygon:nth-child(2n) {\n    animation-name: rotate180;\n    animation-duration: 15s;\n    animation-direction: alternate; }\n  polygon:nth-child(3n) {\n    animation-name: rotate90;\n    animation-duration: 10s; }\n  polygon:nth-child(5n) {\n    animation-duration: 30s;\n    animation-direction: alternate-reverse; }\n\n.intro-content {\n  position: absolute;\n  top: 50%;\n  text-align: center;\n  transform: translateY(-50%);\n  width: 100%; }\n\n.intro-image-cont {\n  height: 150px;\n  margin: auto;\n  width: 150px; }\n\n.intro-line-seperator {\n  margin: 15px auto; }\n\n.intro-image {\n  border: 5px solid #616161;\n  border-radius: 50%;\n  height: 100%;\n  width: 100%; }\n\n.intro-title {\n  color: #fafafa;\n  font-size: 25px;\n  margin-top: 25px; }\n\n.intro-list {\n  margin-bottom: 60px;\n  font-size: 14px; }\n\n.intro-list-item {\n  color: #F5F5F5;\n  padding: 0 5px;\n  display: inline-block; }\n  .intro-list-item .link {\n    color: #E0E0E0; }\n\n.intro-btn {\n  border: 2px solid #E0E0E0;\n  color: #E0E0E0;\n  cursor: pointer;\n  letter-spacing: 1px;\n  padding: 10px;\n  transition: all 500ms ease; }\n  .intro-btn:hover {\n    background: #eee;\n    color: #424242; }\n\n@media screen and (min-width: 900px) {\n  .intro-image-cont {\n    height: 175px;\n    width: 175px; }\n  .intro-title {\n    font-size: 30px; }\n  .intro-line-seperator {\n    margin: 15px auto;\n    width: 350px; }\n  .intro-list {\n    font-size: 16px; } }\n\n@media screen and (min-width: 1200px) {\n  .intro-image-cont {\n    height: 250px;\n    width: 250px; }\n  .intro-title {\n    font-size: 40px; } }\n", ""]);
 
 	// exports
 
@@ -46559,7 +46557,7 @@
 	                                'a',
 	                                {
 	                                    onClick: (0, _lodash.partial)(onSectionClick, _sections2.default["projects"].key) },
-	                                'projects'
+	                                'Projects'
 	                            ),
 	                            ', my ',
 	                            _react2.default.createElement(
@@ -46573,11 +46571,11 @@
 	                                { onClick: (0, _lodash.partial)(onSectionClick, _sections2.default["skills"].key) },
 	                                'Skills'
 	                            ),
-	                            ' and to',
+	                            ' and to ',
 	                            _react2.default.createElement(
 	                                'a',
 	                                { onClick: (0, _lodash.partial)(onSectionClick, _sections2.default["contact"].key) },
-	                                ' get in touch'
+	                                'Get in touch'
 	                            ),
 	                            '.'
 	                        )
@@ -46710,7 +46708,9 @@
 	            var _this2 = this;
 
 	            var active = this.props.active;
-	            var projectDetails = this.state.projectDetails;
+	            var _state = this.state;
+	            var projectDetails = _state.projectDetails;
+	            var selectedSlide = _state.selectedSlide;
 	            var ProjectKeys = Object.keys(_Project2.default);
 	            return _react2.default.createElement(
 	                'section',
@@ -46741,7 +46741,7 @@
 	                                            "backgroundImage": "url(" + project.imgs[0] + ")"
 	                                        },
 	                                        onClick: function onClick() {
-	                                            _this2.setState({ projectDetails: true });
+	                                            _this2.setState({ projectDetails: true, selectedSlide: iter });
 	                                        }
 	                                    },
 	                                    _react2.default.createElement('div', { className: 'pc-overlay' }),
@@ -46772,6 +46772,7 @@
 	                                );
 	                            }),
 	                            projectDetails && _react2.default.createElement(_ProjectFs2.default, {
+	                                selectedSlide: selectedSlide,
 	                                onClose: function onClose() {
 	                                    return _this2.setState({ projectDetails: false });
 	                                }
@@ -46888,6 +46889,8 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -47042,7 +47045,8 @@
 	                ),
 	                _react2.default.createElement(
 	                    _reactSlick2.default,
-	                    sliderSettings,
+	                    _extends({}, sliderSettings, {
+	                        initialSlide: this.props.selectedSlide }),
 	                    Object.keys(_Project2.default).map(function (projectKey) {
 	                        var projectDetails = _Project2.default[projectKey];
 	                        return _react2.default.createElement(
@@ -49685,7 +49689,7 @@
 	                                _react2.default.createElement(
 	                                    _paper2.default,
 	                                    { className: 'work-card', style: {
-	                                            backgroundColor: 'transparent',
+	                                            backgroundColor: '#212121',
 	                                            border: '5px solid #424242',
 	                                            borderRadius: '5px'
 	                                        } },
@@ -49829,7 +49833,7 @@
 	            logo: 'https://media.glassdoor.com/sqll/427532/sprinklr-squarelogo-1461344438537.png',
 	            url: 'https://www.sprinklr.com/'
 	        },
-	        position: 'Product Engineer ( UI )',
+	        position: 'Senior Product Engineer ( UI )',
 	        duration: 'May, 2014',
 	        description: 'Primary focus was Front-end development but also involved throughout entire project lifecycle from design to development. Developed Front-end for various modules like Reporting, Social Apps, Inspiration, Content Management, Paid. Worked as a core part of the development team, and was responsible for rolling out new features, improvements and fix existing issues.'
 	    },

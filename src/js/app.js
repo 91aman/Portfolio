@@ -134,14 +134,12 @@ class App extends Component {
                     screenSize = ScreenSizes.MEDIUM
                 }
 
-                console.log(screenSize);
-
                 this.setState({screenSize});
             };
 
         calculateDimensions();
 
-        scrollContainer.addEventListener('scroll', () => {
+        scrollContainer.addEventListener('scroll', _.debounce(() => {
             const scrollTop = scrollContainer.scrollTop,
                 activeSection = this.state.activeSection;
             let refInView;
@@ -157,11 +155,11 @@ class App extends Component {
             if (activeSection !== refInView) {
                 this.setState({activeSection: refInView});
             }
-        });
+        }, 10));
 
         window.addEventListener("resize", _.debounce(() => {
             calculateDimensions();
-        }, 250));
+        }, 500));
     }
 }
 

@@ -30,10 +30,10 @@ class About extends Component {
                         I enjoy turning complex problems into most maintainable, reusable components to create
                         pixel-perfect interfaces and intuitive user experiences across all devices.
                         <p> Keep scrolling down to know my <a
-                            onClick={partial(onSectionClick, Sections["projects"].key)}>projects</a>,
+                            onClick={partial(onSectionClick, Sections["projects"].key)}>Projects</a>,
                             my <a onClick={partial(onSectionClick, Sections["experience"].key)}>Experience</a>,
-                            my <a onClick={partial(onSectionClick, Sections["skills"].key)}>Skills</a> and to
-                            <a onClick={partial(onSectionClick, Sections["contact"].key)}> get in touch</a>.
+                            my <a onClick={partial(onSectionClick, Sections["skills"].key)}>Skills</a> and
+                            to <a onClick={partial(onSectionClick, Sections["contact"].key)}>Get in touch</a>.
                         </p>
                     </div>
                 </div>

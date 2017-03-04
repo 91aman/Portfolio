@@ -20,7 +20,7 @@ class Intro extends Component {
                 </div>
                 <div className="intro-content">
                     <div className="intro-image-cont anim-delay-1 fade-in">
-                        <img className="intro-image" src="src/img/introImg.jpg"/>
+                        <img className="intro-image" src="src/img/introImg2.png"/>
                     </div>
                     <div className="intro-title anim-delay-3 fade-in">AMAN JAIN</div>
                     <hr className="intro-line-seperator anim-delay-5 fade-in"/>

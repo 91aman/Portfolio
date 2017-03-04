@@ -11,7 +11,7 @@ export default {
             logo: 'https://media.glassdoor.com/sqll/427532/sprinklr-squarelogo-1461344438537.png',
             url: 'https://www.sprinklr.com/'
         },
-        position: 'Product Engineer ( UI )',
+        position: 'Senior Product Engineer ( UI )',
         duration: 'May, 2014',
         description: 'Primary focus was Front-end development but also involved throughout entire project lifecycle from design to development. Developed Front-end for various modules like Reporting, Social Apps, Inspiration, Content Management, Paid. Worked as a core part of the development team, and was responsible for rolling out new features, improvements and fix existing issues.'
     },

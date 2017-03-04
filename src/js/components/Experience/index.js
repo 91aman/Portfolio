@@ -28,7 +28,7 @@ class Experience extends Component {
                                         fill: '#eee'
                                     }}/>
                                     <Paper className="work-card" style={{
-                                        backgroundColor : 'transparent',
+                                        backgroundColor : '#212121',
                                         border: '5px solid #424242',
                                         borderRadius: '5px'
                                     }}>

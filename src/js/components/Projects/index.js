@@ -21,7 +21,7 @@ class Projects extends Component {
 
     render() {
         const {active} = this.props,
-            {projectDetails} = this.state,
+            {projectDetails, selectedSlide} = this.state,
             ProjectKeys = Object.keys(ProjectConstants);
         return (
             <section className="section project-section">
@@ -40,7 +40,7 @@ class Projects extends Component {
                                         style={{
                                             "backgroundImage"  : "url(" + project.imgs[0] + ")"
                                         }}
-                                        onClick={() => {this.setState({projectDetails:true})}}
+                                        onClick={() => {this.setState({projectDetails:true, selectedSlide : iter})}}
                                     >
                                         <div className="pc-overlay"></div>
                                         <div className="pc-details">
@@ -61,6 +61,7 @@ class Projects extends Component {
                             })}
                             {projectDetails &&
                             <ProjectFs
+                                selectedSlide={selectedSlide}
                                 onClose={() => this.setState({projectDetails: false})}
                             />
                             }
