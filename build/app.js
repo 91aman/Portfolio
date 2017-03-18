@@ -50107,6 +50107,9 @@
 	}, {
 	    name: 'linkedin',
 	    link: 'https://in.linkedin.com/in/91aman'
+	}, {
+	    name: 'Resume',
+	    link: 'src/pdf/Resume.pdf'
 	}];
 
 	var Contact = function (_Component) {
