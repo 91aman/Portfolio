@@ -50095,10 +50095,12 @@
 	var SOCIAL_CHANNELS = [{
 	    name: 'facebook',
 	    link: 'https://www.facebook.com/91aman'
-	}, {
-	    name: 'twitter',
-	    link: 'https://twitter.com/91aman'
-	}, {
+	},
+	// {
+	//     name: 'twitter',
+	//     link: 'https://twitter.com/91aman'
+	// },
+	{
 	    name: 'github',
 	    link: 'https://github.com/91aman'
 	}, {
@@ -50109,7 +50111,7 @@
 	    link: 'https://in.linkedin.com/in/91aman'
 	}, {
 	    name: 'Resume',
-	    link: 'src/pdf/Resume.pdf'
+	    link: 'src/pdf/Aman-Jain-Resume.pdf'
 	}];
 
 	var Contact = function (_Component) {
