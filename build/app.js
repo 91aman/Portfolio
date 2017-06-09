@@ -50160,15 +50160,6 @@
 	        )
 	      );
 	    }
-	  }, {
-	    key: 'componentDidMount',
-	    value: function componentDidMount() {
-	      var _this2 = this;
-
-	      window.addEventListener("resize", _.debounce(function () {
-	        console.log(_reactDom2.default.findDOMNode(_this2.refs['ss-body']).clientWidth);
-	      }, 250));
-	    }
 	  }]);
 
 	  return Skills;
@@ -50380,7 +50371,7 @@
 
 
 	// module
-	exports.push([module.id, ".section.contact-section .cs-sep {\n  width: 145px; }\n\n.mailto {\n  color: #eee;\n  padding: 7px;\n  transition: all 500ms ease; }\n  .mailto:hover {\n    background: #fff;\n    color: #444; }\n\n.mailto-wrap {\n  margin: 50px; }\n\n.sc-item {\n  background: #424242;\n  cursor: pointer;\n  padding: 10px;\n  transition: all 500ms ease;\n  width: 150px;\n  margin: 10px auto; }\n  .sc-item:hover {\n    background: #eee; }\n    .sc-item:hover .sc-link {\n      color: #424242; }\n\n.sc-link {\n  color: #eee;\n  text-transform: capitalize;\n  transition: all 500ms ease; }\n\n@media screen and (min-width: 900px) {\n  .section.contact-section .cs-sep {\n    width: 300px; }\n  .sc-item {\n    display: inline-block;\n    margin: 0 3px;\n    width: 80px; } }\n", ""]);
+	exports.push([module.id, ".section.contact-section .cs-sep {\n  width: 145px; }\n\n.mailto {\n  color: #eee;\n  padding: 7px;\n  transition: all 500ms ease; }\n  .mailto:hover {\n    background: #fff;\n    color: #444; }\n\n.mailto-wrap {\n  margin: 50px; }\n\n.sc-item {\n  background: #424242;\n  cursor: pointer;\n  padding: 10px;\n  transition: all 500ms ease;\n  width: 150px;\n  margin: 10px auto; }\n  .sc-item:hover {\n    background: #eee; }\n    .sc-item:hover .sc-link {\n      color: #424242; }\n\n.sc-link {\n  color: #eee;\n  text-transform: capitalize;\n  transition: all 500ms ease; }\n\n@media screen and (min-width: 900px) {\n  .section.contact-section .cs-sep {\n    width: 230px; }\n  .sc-item {\n    display: inline-block;\n    margin: 0 3px;\n    width: 80px; } }\n", ""]);
 
 	// exports
 

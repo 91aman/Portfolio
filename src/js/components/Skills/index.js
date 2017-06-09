@@ -95,12 +95,6 @@ class Skills extends Component {
       </section>
     );
   }
-
-  componentDidMount() {
-    window.addEventListener("resize", _.debounce(() => {
-      console.log(ReactDom.findDOMNode(this.refs['ss-body']).clientWidth)
-    }, 250));
-  }
 }
 
 export default Skills;
