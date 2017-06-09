@@ -27,7 +27,7 @@ export default {
         imgs: ['src/img/projects/comchat/landingPage.png'],
         description: ' <a target="_blank" href="http://comchat.io/">ComChat</a> is a Chat application.',
         link: 'http://comchat.io/',
-        techkeys: ['React','node', 'css3', 'javascript', 'webpack', 'npm', 'git', 'intellij']
+        techkeys: ['React', 'node', 'css3', 'javascript', 'webpack', 'npm', 'git', 'intellij']
     },
     binaryClock: {
         title: 'Binary Clock',

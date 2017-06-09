@@ -6,7 +6,8 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom'
-import Main from './app.js'
+import Main from './app.js';
+import CLI from './components/CLI';
 
 
-ReactDOM.render(<Main />, document.getElementById('app'));
+ReactDOM.render(<CLI />, document.getElementById('app'));
