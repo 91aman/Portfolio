@@ -46,7 +46,7 @@ class Contact extends Component {
             <section className="section contact-section">
                 <div className="section-container">
                     <div className={`section-header cs-header animated ${active ? 'fadeInUp' : 'fadeOutDown'}`}>
-                        Get in touch !
+                        Lets Talk !
                     </div>
                     <hr className={`section-sep cs-sep anim-delay-1 ${active ? 'fade-in' : 'fade-out'}`}/>
                     <div>

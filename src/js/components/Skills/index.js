@@ -29,7 +29,7 @@ let PARSED_SKILLS = [];
 const MinSkillContainer = (active) => {
   return Object.keys(SkillsConstants).map((skillKey, iter) => {
     const skill = SkillsConstants[skillKey];
-    return <div className={`min-skill-cont anim-delay-${iter} ${active ? 'fade-in' : 'fade-out'}`}><MinTech key={skillKey} {...skill}/></div>
+    return <div key={skillKey} className={`min-skill-cont anim-delay-${iter} ${active ? 'fade-in' : 'fade-out'}`}><MinTech {...skill}/></div>
   })
 }
 

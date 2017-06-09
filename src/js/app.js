@@ -112,21 +112,21 @@ class App extends Component {
     componentDidMount() {
         const refsObj = this.refs,
             scrollContainer = this.refs['scroll-container'],
+            recalculateTopValues = () => {
+              let topHeight = 0;
+
+              SectionArray.forEach((ref, iter) => {
+                if (!iter) {
+                  topDetails[ref] = 0;
+                } else {
+                  topHeight += ReactDom.findDOMNode(refsObj[SectionArray[iter - 1]]).clientHeight;
+                  topDetails[ref] = topHeight;
+                }
+              });
+            },
             calculateDimensions = () => {
-                let topHeight = 0,
-                    screenSize = 'large',
+                   let screenSize = 'large',
                     windowInnerWidth = window.innerWidth;
-                SectionArray.forEach((ref, iter) => {
-                    if (!iter) {
-                        topDetails[ref] = 0;
-                    } else {
-                        const prevSectionHeight = ReactDom.findDOMNode(refsObj[SectionArray[iter - 1]]).clientHeight;
-                        topHeight += prevSectionHeight;
-
-                        topDetails[ref] = topHeight;
-                    }
-                });
-
 
                 if (windowInnerWidth <= 900) {
                     screenSize = ScreenSizes.SMALL
@@ -134,7 +134,7 @@ class App extends Component {
                     screenSize = ScreenSizes.MEDIUM
                 }
 
-                this.setState({screenSize});
+                this.setState({screenSize}, recalculateTopValues);
             };
 
         calculateDimensions();
@@ -146,7 +146,6 @@ class App extends Component {
 
             Object.keys(topDetails).forEach((ref) => {
                 const topFromRef = topDetails[ref] - (0.5 * window.innerHeight);
-
                 if (scrollTop >= topFromRef) {
                     refInView = ref;
                 }
@@ -155,11 +154,9 @@ class App extends Component {
             if (activeSection !== refInView) {
                 this.setState({activeSection: refInView});
             }
-        }, 10));
+        }, 50));
 
-        window.addEventListener("resize", _.debounce(() => {
-            calculateDimensions();
-        }, 500));
+        window.addEventListener("resize", _.debounce(calculateDimensions, 500));
     }
 }
 
