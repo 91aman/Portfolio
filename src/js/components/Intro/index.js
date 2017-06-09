@@ -26,7 +26,7 @@ class Intro extends Component {
                     <hr className="intro-line-seperator anim-delay-5 fade-in"/>
                     <ul className="intro-list anim-delay-7 fade-in">
                         <li className="intro-list-item">
-                            cs &nbsp;
+                            CS &nbsp;
                             <a className="link" href="http://www.daiict.ac.in/" target="_blank">@daiict</a></li>
                         <li className="intro-list-item">·</li>
                         <li className="intro-list-item">

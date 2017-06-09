@@ -11,6 +11,14 @@ import Style from './style.scss';
 import WorkConstants from './work';
 
 class Experience extends Component {
+  shouldComponentUpdate(nextProps, nextState, nextContext) {
+    if (nextProps.active && !this.hasBeenActiveBefore) {
+      this.hasBeenActiveBefore = true;
+      return true;
+    }
+    return false;
+  }
+
     render() {
         const {active} = this.props;
         return (

@@ -11,66 +11,76 @@ import ProjectConstants from './Project';
 import ProjectFs from './ProjectFs';
 
 class Projects extends Component {
-    constructor(props) {
-        super(props);
+  constructor(props) {
+    super(props);
 
-        this.state = {
-            projectDetails: false
-        }
+    this.state = {
+      projectDetails: false
     }
+  }
 
-    render() {
-        const {active} = this.props,
-            {projectDetails, selectedSlide} = this.state,
-            ProjectKeys = Object.keys(ProjectConstants);
-        return (
-            <section className="section project-section">
-                <div className="">
-                    <div className={`section-header as-header animated ${active ? 'fadeInUp' : 'fadeOutDown'}`}>Projects
-                    </div>
-                    <hr className={`section-sep ps-sep anim-delay-1 ${active ? 'fade-in' : 'fade-out'}`}/>
-                    <div className={`ps-body`}>
-                        <div className="projects-container">
-                            {ProjectKeys.map((key, iter) => {
-                                const project = ProjectConstants[key];
-                                return (
-                                    <div
-                                        key={key}
-                                        className={`project-cont anim-delay-${iter + 1} ${active ? "fade-in" : "fade-out" }`}
-                                        style={{
-                                            "backgroundImage"  : "url(" + project.imgs[0] + ")"
-                                        }}
-                                        onClick={() => {this.setState({projectDetails:true, selectedSlide : iter})}}
-                                    >
-                                        <div className="pc-overlay"></div>
-                                        <div className="pc-details">
-                                            <div className="pc-corner-ribbon"
-                                                 data-type={project.typeId}>{project.type}</div>
-                                            <div className="pc-details-wrap">
-                                                <div className="pc-title">
-                                                    {project.title}
-                                                </div>
-                                                <div className="pc-desc">
-                                                    {project.srtDescription}
-                                                </div>
-                                            </div>
+  shouldComponentUpdate(nextProps, nextState, nextContext) {
+    if ((nextProps.active && !this.hasBeenActiveBefore) || (nextState.projectDetails !== this.state.projectDetails)) {
+      this.hasBeenActiveBefore = true;
+      return true;
+    }
+    return false;
+  }
 
-                                        </div>
-                                    </div>
-                                )
-                            })}
-                            {projectDetails &&
-                            <ProjectFs
-                                selectedSlide={selectedSlide}
-                                onClose={() => this.setState({projectDetails: false})}
-                            />
-                            }
+  render() {
+    const { active } = this.props,
+      { projectDetails, selectedSlide } = this.state,
+      ProjectKeys = Object.keys(ProjectConstants);
+    return (
+      <section className="section project-section">
+        <div className="">
+          <div className={`section-header as-header animated ${active ? 'fadeInUp' : 'fadeOutDown'}`}>Projects
+          </div>
+          <hr className={`section-sep ps-sep anim-delay-1 ${active ? 'fade-in' : 'fade-out'}`}/>
+          <div className={`ps-body`}>
+            <div className="projects-container">
+              {ProjectKeys.map((key, iter) => {
+                const project = ProjectConstants[key];
+                return (
+                  <div
+                    key={key}
+                    className={`project-cont anim-delay-${iter + 1} ${active ? "fade-in" : "fade-out" }`}
+                    style={{
+                      "backgroundImage": "url(" + project.imgs[0] + ")"
+                    }}
+                    onClick={() => {
+                      this.setState({ projectDetails: true, selectedSlide: iter })
+                    }}
+                  >
+                    <div className="pc-overlay"></div>
+                    <div className="pc-details">
+                      <div className="pc-corner-ribbon"
+                        data-type={project.typeId}>{project.type}</div>
+                      <div className="pc-details-wrap">
+                        <div className="pc-title">
+                          {project.title}
                         </div>
+                        <div className="pc-desc">
+                          {project.srtDescription}
+                        </div>
+                      </div>
+
                     </div>
-                </div>
-            </section>
-        );
-    }
+                  </div>
+                )
+              })}
+              {projectDetails &&
+              <ProjectFs
+                selectedSlide={selectedSlide}
+                onClose={() => this.setState({ projectDetails: false })}
+              />
+              }
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
 }
 
 export default Projects;

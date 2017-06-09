@@ -42442,7 +42442,7 @@
 	                        _react2.default.createElement(
 	                            'li',
 	                            { className: 'intro-list-item' },
-	                            'cs  ',
+	                            'CS  ',
 	                            _react2.default.createElement(
 	                                'a',
 	                                { className: 'link', href: 'http://www.daiict.ac.in/', target: '_blank' },
@@ -46467,7 +46467,7 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	    value: true
+	  value: true
 	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -46503,89 +46503,98 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var About = function (_Component) {
-	    _inherits(About, _Component);
+	  _inherits(About, _Component);
 
-	    function About() {
-	        _classCallCheck(this, About);
+	  function About() {
+	    _classCallCheck(this, About);
 
-	        return _possibleConstructorReturn(this, (About.__proto__ || Object.getPrototypeOf(About)).apply(this, arguments));
+	    return _possibleConstructorReturn(this, (About.__proto__ || Object.getPrototypeOf(About)).apply(this, arguments));
+	  }
+
+	  _createClass(About, [{
+	    key: 'shouldComponentUpdate',
+	    value: function shouldComponentUpdate(nextProps, nextState, nextContext) {
+	      if (nextProps.active && !this.hasBeenActiveBefore) {
+	        this.hasBeenActiveBefore = true;
+	        return true;
+	      }
+	      return false;
 	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var _props = this.props;
+	      var active = _props.active;
+	      var onSectionClick = _props.onSectionClick;
+	      var screenSize = _props.screenSize;
 
-	    _createClass(About, [{
-	        key: 'render',
-	        value: function render() {
-	            var _props = this.props;
-	            var active = _props.active;
-	            var onSectionClick = _props.onSectionClick;
-	            var screenSize = _props.screenSize;
+	      return _react2.default.createElement(
+	        'section',
+	        { className: 'section about-section' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: (0, _classnames2.default)({ "section-container": true || screenSize === _screenSizes2.default.LARGE }) },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'section-header as-header animated ' + (active ? 'fadeInUp' : 'fadeOutDown') },
+	            'Hello World !'
+	          ),
+	          _react2.default.createElement('hr', { className: 'section-sep as-sep anim-delay-2 ' + (active ? "fade-in" : "fade-out") }),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'as-body anim-delay-4 ' + (active ? "fade-in" : "fade-out") },
+	            'I am Aman, a passionate front-end developer and a Design Enthusiast from Gurgaon, India. I have a Bachelor’s Degree in Computer Sciences from ',
+	            _react2.default.createElement(
+	              'a',
+	              { href: 'http://www.daiict.ac.in/',
+	                target: '_blank' },
+	              'Dhirubhai Ambani Institute of information and Communication Technology'
+	            ),
+	            ', and I am working with ',
+	            _react2.default.createElement(
+	              'a',
+	              { href: 'https://www.sprinklr.com/',
+	                target: '_blank' },
+	              'Sprinklr'
+	            ),
+	            ' to create a enterprise software which helps brands to truly know their customers. I enjoy turning complex problems into most maintainable, reusable components to create pixel-perfect interfaces and intuitive user experiences across all devices.',
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              ' Keep scrolling down to know my ',
+	              _react2.default.createElement(
+	                'a',
+	                {
+	                  onClick: (0, _lodash.partial)(onSectionClick, _sections2.default["projects"].key) },
+	                'Projects'
+	              ),
+	              ', my ',
+	              _react2.default.createElement(
+	                'a',
+	                { onClick: (0, _lodash.partial)(onSectionClick, _sections2.default["experience"].key) },
+	                'Experience'
+	              ),
+	              ', my ',
+	              _react2.default.createElement(
+	                'a',
+	                { onClick: (0, _lodash.partial)(onSectionClick, _sections2.default["skills"].key) },
+	                'Skills'
+	              ),
+	              ' and to ',
+	              _react2.default.createElement(
+	                'a',
+	                { onClick: (0, _lodash.partial)(onSectionClick, _sections2.default["contact"].key) },
+	                'Get in touch'
+	              ),
+	              '.'
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
 
-	            return _react2.default.createElement(
-	                'section',
-	                { className: 'section about-section' },
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: (0, _classnames2.default)({ "section-container": true || screenSize === _screenSizes2.default.LARGE }) },
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'section-header as-header animated ' + (active ? 'fadeInUp' : 'fadeOutDown') },
-	                        'Hello World !'
-	                    ),
-	                    _react2.default.createElement('hr', { className: 'section-sep as-sep anim-delay-2 ' + (active ? "fade-in" : "fade-out") }),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'as-body anim-delay-4 ' + (active ? "fade-in" : "fade-out") },
-	                        'I am Aman, a passionate front-end developer and a Design Enthusiast from Gurgaon, India. I have a Bachelor’s Degree in Computer Sciences from ',
-	                        _react2.default.createElement(
-	                            'a',
-	                            { href: 'http://www.daiict.ac.in/',
-	                                target: '_blank' },
-	                            'Dhirubhai Ambani Institute of information and Communication Technology'
-	                        ),
-	                        ', and I am working with ',
-	                        _react2.default.createElement(
-	                            'a',
-	                            { href: 'https://www.sprinklr.com/',
-	                                target: '_blank' },
-	                            'Sprinklr'
-	                        ),
-	                        ' to create a enterprise software which helps brands to truly know their customers. I enjoy turning complex problems into most maintainable, reusable components to create pixel-perfect interfaces and intuitive user experiences across all devices.',
-	                        _react2.default.createElement(
-	                            'p',
-	                            null,
-	                            ' Keep scrolling down to know my ',
-	                            _react2.default.createElement(
-	                                'a',
-	                                {
-	                                    onClick: (0, _lodash.partial)(onSectionClick, _sections2.default["projects"].key) },
-	                                'Projects'
-	                            ),
-	                            ', my ',
-	                            _react2.default.createElement(
-	                                'a',
-	                                { onClick: (0, _lodash.partial)(onSectionClick, _sections2.default["experience"].key) },
-	                                'Experience'
-	                            ),
-	                            ', my ',
-	                            _react2.default.createElement(
-	                                'a',
-	                                { onClick: (0, _lodash.partial)(onSectionClick, _sections2.default["skills"].key) },
-	                                'Skills'
-	                            ),
-	                            ' and to ',
-	                            _react2.default.createElement(
-	                                'a',
-	                                { onClick: (0, _lodash.partial)(onSectionClick, _sections2.default["contact"].key) },
-	                                'Get in touch'
-	                            ),
-	                            '.'
-	                        )
-	                    )
-	                )
-	            );
-	        }
-	    }]);
-
-	    return About;
+	  return About;
 	}(_react.Component);
 
 	exports.default = About;
@@ -46652,7 +46661,7 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	    value: true
+	  value: true
 	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -46689,102 +46698,111 @@
 	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
 
 	var Projects = function (_Component) {
-	    _inherits(Projects, _Component);
+	  _inherits(Projects, _Component);
 
-	    function Projects(props) {
-	        _classCallCheck(this, Projects);
+	  function Projects(props) {
+	    _classCallCheck(this, Projects);
 
-	        var _this = _possibleConstructorReturn(this, (Projects.__proto__ || Object.getPrototypeOf(Projects)).call(this, props));
+	    var _this = _possibleConstructorReturn(this, (Projects.__proto__ || Object.getPrototypeOf(Projects)).call(this, props));
 
-	        _this.state = {
-	            projectDetails: false
-	        };
-	        return _this;
+	    _this.state = {
+	      projectDetails: false
+	    };
+	    return _this;
+	  }
+
+	  _createClass(Projects, [{
+	    key: 'shouldComponentUpdate',
+	    value: function shouldComponentUpdate(nextProps, nextState, nextContext) {
+	      if (nextProps.active && !this.hasBeenActiveBefore || nextState.projectDetails !== this.state.projectDetails) {
+	        this.hasBeenActiveBefore = true;
+	        return true;
+	      }
+	      return false;
 	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var _this2 = this;
 
-	    _createClass(Projects, [{
-	        key: 'render',
-	        value: function render() {
-	            var _this2 = this;
-
-	            var active = this.props.active;
-	            var _state = this.state;
-	            var projectDetails = _state.projectDetails;
-	            var selectedSlide = _state.selectedSlide;
-	            var ProjectKeys = Object.keys(_Project2.default);
-	            return _react2.default.createElement(
-	                'section',
-	                { className: 'section project-section' },
-	                _react2.default.createElement(
+	      var active = this.props.active;
+	      var _state = this.state;
+	      var projectDetails = _state.projectDetails;
+	      var selectedSlide = _state.selectedSlide;
+	      var ProjectKeys = Object.keys(_Project2.default);
+	      return _react2.default.createElement(
+	        'section',
+	        { className: 'section project-section' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: '' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'section-header as-header animated ' + (active ? 'fadeInUp' : 'fadeOutDown') },
+	            'Projects'
+	          ),
+	          _react2.default.createElement('hr', { className: 'section-sep ps-sep anim-delay-1 ' + (active ? 'fade-in' : 'fade-out') }),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'ps-body' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'projects-container' },
+	              ProjectKeys.map(function (key, iter) {
+	                var project = _Project2.default[key];
+	                return _react2.default.createElement(
+	                  'div',
+	                  {
+	                    key: key,
+	                    className: 'project-cont anim-delay-' + (iter + 1) + ' ' + (active ? "fade-in" : "fade-out"),
+	                    style: {
+	                      "backgroundImage": "url(" + project.imgs[0] + ")"
+	                    },
+	                    onClick: function onClick() {
+	                      _this2.setState({ projectDetails: true, selectedSlide: iter });
+	                    }
+	                  },
+	                  _react2.default.createElement('div', { className: 'pc-overlay' }),
+	                  _react2.default.createElement(
 	                    'div',
-	                    { className: '' },
+	                    { className: 'pc-details' },
 	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'section-header as-header animated ' + (active ? 'fadeInUp' : 'fadeOutDown') },
-	                        'Projects'
+	                      'div',
+	                      { className: 'pc-corner-ribbon',
+	                        'data-type': project.typeId },
+	                      project.type
 	                    ),
-	                    _react2.default.createElement('hr', { className: 'section-sep ps-sep anim-delay-1 ' + (active ? 'fade-in' : 'fade-out') }),
 	                    _react2.default.createElement(
+	                      'div',
+	                      { className: 'pc-details-wrap' },
+	                      _react2.default.createElement(
 	                        'div',
-	                        { className: 'ps-body' },
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'projects-container' },
-	                            ProjectKeys.map(function (key, iter) {
-	                                var project = _Project2.default[key];
-	                                return _react2.default.createElement(
-	                                    'div',
-	                                    {
-	                                        key: key,
-	                                        className: 'project-cont anim-delay-' + (iter + 1) + ' ' + (active ? "fade-in" : "fade-out"),
-	                                        style: {
-	                                            "backgroundImage": "url(" + project.imgs[0] + ")"
-	                                        },
-	                                        onClick: function onClick() {
-	                                            _this2.setState({ projectDetails: true, selectedSlide: iter });
-	                                        }
-	                                    },
-	                                    _react2.default.createElement('div', { className: 'pc-overlay' }),
-	                                    _react2.default.createElement(
-	                                        'div',
-	                                        { className: 'pc-details' },
-	                                        _react2.default.createElement(
-	                                            'div',
-	                                            { className: 'pc-corner-ribbon',
-	                                                'data-type': project.typeId },
-	                                            project.type
-	                                        ),
-	                                        _react2.default.createElement(
-	                                            'div',
-	                                            { className: 'pc-details-wrap' },
-	                                            _react2.default.createElement(
-	                                                'div',
-	                                                { className: 'pc-title' },
-	                                                project.title
-	                                            ),
-	                                            _react2.default.createElement(
-	                                                'div',
-	                                                { className: 'pc-desc' },
-	                                                project.srtDescription
-	                                            )
-	                                        )
-	                                    )
-	                                );
-	                            }),
-	                            projectDetails && _react2.default.createElement(_ProjectFs2.default, {
-	                                selectedSlide: selectedSlide,
-	                                onClose: function onClose() {
-	                                    return _this2.setState({ projectDetails: false });
-	                                }
-	                            })
-	                        )
+	                        { className: 'pc-title' },
+	                        project.title
+	                      ),
+	                      _react2.default.createElement(
+	                        'div',
+	                        { className: 'pc-desc' },
+	                        project.srtDescription
+	                      )
 	                    )
-	                )
-	            );
-	        }
-	    }]);
+	                  )
+	                );
+	              }),
+	              projectDetails && _react2.default.createElement(_ProjectFs2.default, {
+	                selectedSlide: selectedSlide,
+	                onClose: function onClose() {
+	                  return _this2.setState({ projectDetails: false });
+	                }
+	              })
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
 
-	    return Projects;
+	  return Projects;
 	}(_react.Component);
 
 	exports.default = Projects;
@@ -49660,6 +49678,15 @@
 	    }
 
 	    _createClass(Experience, [{
+	        key: 'shouldComponentUpdate',
+	        value: function shouldComponentUpdate(nextProps, nextState, nextContext) {
+	            if (nextProps.active && !this.hasBeenActiveBefore) {
+	                this.hasBeenActiveBefore = true;
+	                return true;
+	            }
+	            return false;
+	        }
+	    }, {
 	        key: 'render',
 	        value: function render() {
 	            var active = this.props.active;
@@ -49866,7 +49893,7 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	    value: true
+	  value: true
 	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -49903,119 +49930,128 @@
 	var PARSED_SKILLS = [];
 
 	(function () {
-	    var iter = 0,
-	        rowAttr = [];
+	  var iter = 0,
+	      rowAttr = [];
 
-	    Object.keys(_Skills2.default).map(function (skillKey) {
-	        var skill = _Skills2.default[skillKey];
+	  Object.keys(_Skills2.default).map(function (skillKey) {
+	    var skill = _Skills2.default[skillKey];
 
-	        if (!(iter % SKILLS_IN_A_ROW)) {
-	            rowAttr.length && PARSED_SKILLS.push(rowAttr);
-	            rowAttr = [];
-	        }
-	        iter++;
-	        rowAttr.push(skill);
-	    });
+	    if (!(iter % SKILLS_IN_A_ROW)) {
+	      rowAttr.length && PARSED_SKILLS.push(rowAttr);
+	      rowAttr = [];
+	    }
+	    iter++;
+	    rowAttr.push(skill);
+	  });
 
-	    rowAttr.length && PARSED_SKILLS.push(rowAttr);
+	  rowAttr.length && PARSED_SKILLS.push(rowAttr);
 	})();
 
 	var Skills = function (_Component) {
-	    _inherits(Skills, _Component);
+	  _inherits(Skills, _Component);
 
-	    function Skills() {
-	        _classCallCheck(this, Skills);
+	  function Skills() {
+	    _classCallCheck(this, Skills);
 
-	        return _possibleConstructorReturn(this, (Skills.__proto__ || Object.getPrototypeOf(Skills)).apply(this, arguments));
+	    return _possibleConstructorReturn(this, (Skills.__proto__ || Object.getPrototypeOf(Skills)).apply(this, arguments));
+	  }
+
+	  _createClass(Skills, [{
+	    key: 'shouldComponentUpdate',
+	    value: function shouldComponentUpdate(nextProps) {
+	      if (nextProps.active && !this.hasBeenActiveBefore) {
+	        this.hasBeenActiveBefore = true;
+	        return true;
+	      }
+	      return false;
 	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var active = this.props.active;
 
-	    _createClass(Skills, [{
-	        key: 'render',
-	        value: function render() {
-	            var active = this.props.active;
-
-	            return _react2.default.createElement(
-	                'section',
-	                { className: 'section skill-section' },
-	                _react2.default.createElement(
+	      return _react2.default.createElement(
+	        'section',
+	        { className: 'section skill-section' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: '' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'section-header ss-header animated ' + (active ? 'fadeInUp' : 'fadeOutDown') },
+	            'Skills'
+	          ),
+	          _react2.default.createElement('hr', { className: 'section-sep ss-sep anim-delay-1 ' + (active ? 'fade-in' : 'fade-out') }),
+	          _react2.default.createElement(
+	            'div',
+	            { ref: 'ss-body', className: 'ss-body' },
+	            PARSED_SKILLS.map(function (skillsArr, iter) {
+	              return _react2.default.createElement(
+	                'div',
+	                { className: 'somethins', key: iter, style: {
+	                    transform: "translateY(" + iter * -50 + "%)"
+	                  } },
+	                _.map(skillsArr, function (skill, iter2) {
+	                  return _react2.default.createElement(
 	                    'div',
-	                    { className: '' },
+	                    {
+	                      className: (0, _classnames2.default)('skills-cont-wrap anim-delay-' + (iter * SKILLS_IN_A_ROW + iter2) + ' ' + (active ? "fade-in" : "fade-out"), {
+	                        shift: _.contains([7, 8, 9, 10, 11, 12], iter2)
+	                      }),
+	                      key: iter2,
+	                      'data-random': Math.floor(Math.random() * (5 - 1) + 1) },
 	                    _react2.default.createElement(
+	                      'a',
+	                      { className: 'skill-link', href: skill.url, target: '_blank' },
+	                      _react2.default.createElement(
 	                        'div',
-	                        { className: 'section-header ss-header animated ' + (active ? 'fadeInUp' : 'fadeOutDown') },
-	                        'Skills'
-	                    ),
-	                    _react2.default.createElement('hr', { className: 'section-sep ss-sep anim-delay-1 ' + (active ? 'fade-in' : 'fade-out') }),
-	                    _react2.default.createElement(
+	                        { className: 'skills-cont front' },
+	                        _react2.default.createElement(
+	                          'div',
+	                          { className: 'skill-logo' },
+	                          _react2.default.createElement('img', { src: skill.logo })
+	                        ),
+	                        _react2.default.createElement(
+	                          'div',
+	                          { className: 'skill-label' },
+	                          skill.label
+	                        )
+	                      ),
+	                      _react2.default.createElement(
 	                        'div',
-	                        { ref: 'ss-body', className: 'ss-body' },
-	                        PARSED_SKILLS.map(function (skillsArr, iter) {
-	                            return _react2.default.createElement(
-	                                'div',
-	                                { className: 'somethins', key: iter, style: {
-	                                        transform: "translateY(" + iter * -50 + "%)"
-	                                    } },
-	                                _.map(skillsArr, function (skill, iter2) {
-	                                    return _react2.default.createElement(
-	                                        'div',
-	                                        {
-	                                            className: (0, _classnames2.default)('skills-cont-wrap anim-delay-' + (iter * SKILLS_IN_A_ROW + iter2) + ' ' + (active ? "fade-in" : "fade-out"), {
-	                                                shift: _.contains([7, 8, 9, 10, 11, 12], iter2)
-	                                            }),
-	                                            key: iter2,
-	                                            'data-random': Math.floor(Math.random() * (5 - 1) + 1) },
-	                                        _react2.default.createElement(
-	                                            'a',
-	                                            { className: 'skill-link', href: skill.url, target: '_blank' },
-	                                            _react2.default.createElement(
-	                                                'div',
-	                                                { className: 'skills-cont front' },
-	                                                _react2.default.createElement(
-	                                                    'div',
-	                                                    { className: 'skill-logo' },
-	                                                    _react2.default.createElement('img', { src: skill.logo })
-	                                                ),
-	                                                _react2.default.createElement(
-	                                                    'div',
-	                                                    { className: 'skill-label' },
-	                                                    skill.label
-	                                                )
-	                                            ),
-	                                            _react2.default.createElement(
-	                                                'div',
-	                                                { className: 'skills-cont back' },
-	                                                _react2.default.createElement(
-	                                                    'div',
-	                                                    { className: 'skill-logo' },
-	                                                    _react2.default.createElement('img', { src: skill.logo })
-	                                                ),
-	                                                _react2.default.createElement(
-	                                                    'div',
-	                                                    { className: 'skill-label' },
-	                                                    skill.label
-	                                                )
-	                                            )
-	                                        )
-	                                    );
-	                                })
-	                            );
-	                        })
+	                        { className: 'skills-cont back' },
+	                        _react2.default.createElement(
+	                          'div',
+	                          { className: 'skill-logo' },
+	                          _react2.default.createElement('img', { src: skill.logo })
+	                        ),
+	                        _react2.default.createElement(
+	                          'div',
+	                          { className: 'skill-label' },
+	                          skill.label
+	                        )
+	                      )
 	                    )
-	                )
-	            );
-	        }
-	    }, {
-	        key: 'componentDidMount',
-	        value: function componentDidMount() {
-	            var _this2 = this;
+	                  );
+	                })
+	              );
+	            })
+	          )
+	        )
+	      );
+	    }
+	  }, {
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      var _this2 = this;
 
-	            window.addEventListener("resize", _.debounce(function () {
-	                console.log(_reactDom2.default.findDOMNode(_this2.refs['ss-body']).clientWidth);
-	            }, 250));
-	        }
-	    }]);
+	      window.addEventListener("resize", _.debounce(function () {
+	        console.log(_reactDom2.default.findDOMNode(_this2.refs['ss-body']).clientWidth);
+	      }, 250));
+	    }
+	  }]);
 
-	    return Skills;
+	  return Skills;
 	}(_react.Component);
 
 	exports.default = Skills;
@@ -50124,6 +50160,15 @@
 	    }
 
 	    _createClass(Contact, [{
+	        key: 'shouldComponentUpdate',
+	        value: function shouldComponentUpdate(nextProps, nextState, nextContext) {
+	            if (nextProps.active && !this.hasBeenActiveBefore) {
+	                this.hasBeenActiveBefore = true;
+	                return true;
+	            }
+	            return false;
+	        }
+	    }, {
 	        key: 'render',
 	        value: function render() {
 	            var active = this.props.active;
