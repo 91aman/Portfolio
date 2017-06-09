@@ -4,6 +4,7 @@ import Close from 'material-ui/lib/svg-icons/navigation/close';
 import Next from 'material-ui/lib/svg-icons/navigation/chevron-right';
 import Prev from 'material-ui/lib/svg-icons/navigation/chevron-left';
 import Slider from 'react-slick';
+import MinTech from '../Skills/MinTech';
 import Styles from './ProjectFs.scss';
 import Projects from './Project';
 import Technology from '../Skills/Skills';
@@ -45,12 +46,7 @@ const ProjectDetailComp = (projectDetails) => {
                         {
                             techkeys.map((key) => {
                                 const techDetails = Technology[key];
-                                return (<div className="tech-list-item" key={key}>
-                                    <div className="icon">
-                                        <img src={techDetails.logo}/>
-                                    </div>
-                                    <div className="title">{techDetails.label}</div>
-                                </div>)
+                                return <MinTech key={key} {...techDetails}/>
                             })
                         }
                     </ul>

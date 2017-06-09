@@ -2,6 +2,7 @@ import React, {Component, PropTypes} from 'react';
 import ReactDom from 'react-dom';
 import cx from 'classnames';
 import SkillsConstants from './Skills';
+import MinTech from './MinTech';
 import Styles from './style.scss';
 
 const SKILLS_IN_A_ROW = 13;
@@ -25,17 +26,24 @@ let PARSED_SKILLS = [];
   rowAttr.length && PARSED_SKILLS.push(rowAttr);
 })();
 
+const MinSkillContainer = (active) => {
+  return Object.keys(SkillsConstants).map((skillKey, iter) => {
+    const skill = SkillsConstants[skillKey];
+    return <div className={`min-skill-cont anim-delay-${iter} ${active ? 'fade-in' : 'fade-out'}`}><MinTech key={skillKey} {...skill}/></div>
+  })
+}
+
 class Skills extends Component {
   shouldComponentUpdate(nextProps) {
     if (nextProps.active && !this.hasBeenActiveBefore) {
       this.hasBeenActiveBefore = true;
       return true;
     }
-    return false;
+    return nextProps.screenSize !== this.props.screenSize;
   }
 
   render() {
-    const { active } = this.props;
+    const { active, screenSize } = this.props;
     return (
       <section className="section skill-section">
         <div className="">
@@ -44,7 +52,7 @@ class Skills extends Component {
           </div>
           <hr className={`section-sep ss-sep anim-delay-1 ${active ? 'fade-in' : 'fade-out'}`}/>
           <div ref="ss-body" className="ss-body">
-            {PARSED_SKILLS.map((skillsArr, iter) => {
+            {screenSize === 'small' ? MinSkillContainer(active) : PARSED_SKILLS.map((skillsArr, iter) => {
               return (
                 <div className="somethins" key={iter} style={{
                   transform: "translateY(" + (iter * -50) + "%)"

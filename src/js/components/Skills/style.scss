@@ -183,6 +183,10 @@ $hexagonBackColor: #eee;
   margin: auto;
 }
 
+.min-skill-cont{
+  display: inline-block;
+}
+
 
 @media screen and (min-width: 900px) {
   @include HexagonSize();

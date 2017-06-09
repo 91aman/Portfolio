@@ -53,7 +53,7 @@ const SECTION_DETAILS_MAP = {
     },
     contact: {
         key: 'contact',
-        label: 'Get in Touch',
+        label: 'Lets Talk',
         icon: ContactIcon,
         component: Contact
     }
