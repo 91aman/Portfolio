@@ -48,7 +48,8 @@ class Experience extends Component {
                     <div className="work-c-position">
                       <a href={work.company.url} target="_blank">{work.company.name}</a>
                     </div>
-                    <ul className="work-c-desc">{castArray(work.description).map(d => <li
+                    <ul className="work-c-desc">{castArray(work.description).map((d, iter) => <li
+                      key={iter}
                       className="work-c-desc-item"
                       dangerouslySetInnerHTML={{ __html: d }}/>)}</ul>
                     <div className="work-date">{work.duration}</div>

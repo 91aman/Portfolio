@@ -157,6 +157,8 @@ class App extends Component {
         }, 50));
 
         window.addEventListener("resize", _.debounce(calculateDimensions, 500));
+
+        console.clear();
     }
 }
 
