@@ -55,10 +55,12 @@
   }
 
   .work-c-desc {
-    color: #BDBDBD;
+    color: #E0E0E0;
     letter-spacing: 0.5px;
     font-size: 12px;
     font-weight: 300;
+    list-style-type: disc;
+    padding-left: 15px;
   }
 
   .work-card {
@@ -93,6 +95,11 @@
         right: 101%;
       }
     }
+  }
+
+  .work-c-desc-item {
+    padding: 5px 0;
+    line-height: 1.3;
   }
 }
 
