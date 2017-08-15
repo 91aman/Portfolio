@@ -46862,7 +46862,7 @@
 	        type: 'Pet Project',
 	        typeId: 'PET',
 	        imgs: ['src/img/projects/facesOfDaiict/hover.jpg', 'src/img/projects/facesOfDaiict/batch.jpg', 'src/img/projects/facesOfDaiict/course.jpg'],
-	        description: ' <a target="_blank" href="http://faces-of-daiict.in/">Faces of Daiict</a> is the largest collection of student\'s profile pictures across all batches and courses. Now you can look at your all your batchmates photos at a single place. Take a trip down the memory lane.',
+	        description: ' <a class="a_link" target="_blank" href="http://faces-of-daiict.in/">Faces of Daiict</a> is the largest collection of student\'s profile pictures across all batches and courses. Now you can look at your all your batchmates photos at a single place. Take a trip down the memory lane.',
 	        link: 'http://faces-of-daiict.in/',
 	        techkeys: ['React', 'css3', 'javascript', 'webpack', 'npm', 'git', 'intellij']
 	    },
@@ -46872,7 +46872,7 @@
 	        type: 'Pet Project',
 	        typeId: 'PET',
 	        imgs: ['src/img/projects/liveSports/Dialog.png', 'src/img/projects/liveSports/Events.png', 'src/img/projects/liveSports/Matches.png', 'src/img/projects/liveSports/Notification.png'],
-	        description: ' <a target="_blank" href="http://91aman.github.io/LiveSports/">Live Sports</a> is a Sports Notification Site. If you are avid cricket fan and want to be updated about score with out compromising your work, "Live Sports" is here for you. Now get notifications on each updates of the match you want.',
+	        description: ' <a class="a_link" target="_blank" href="http://91aman.github.io/LiveSports/">Live Sports</a> is a Sports Notification Site. If you are avid cricket fan and want to be updated about score with out compromising your work, "Live Sports" is here for you. Now get notifications on each updates of the match you want.',
 	        link: 'http://91aman.github.io/LiveSports/',
 	        techkeys: ['React', 'css3', 'javascript', 'webpack', 'npm', 'git', 'intellij']
 	    },
@@ -46882,7 +46882,7 @@
 	        type: 'Pet Project',
 	        typeId: 'PET',
 	        imgs: ['src/img/projects/comchat/landingPage.png'],
-	        description: ' <a target="_blank" href="http://comchat.io/">ComChat</a> is a Chat application.',
+	        description: ' <a class="a_link" target="_blank" href="http://comchat.io/">ComChat</a> is a Chat application.',
 	        link: 'http://comchat.io/',
 	        techkeys: ['React', 'node', 'css3', 'javascript', 'webpack', 'npm', 'git', 'intellij']
 	    },
@@ -46891,7 +46891,7 @@
 	        type: 'Pet Project',
 	        typeId: 'PET',
 	        imgs: ['src/img/projects/binaryClock/main.png'],
-	        description: ' <a target="_blank" href="http://91aman.github.io/binaryClock/">Binary Clock</a> is a clock that displays the current time in the binary format.',
+	        description: ' <a class="a_link" target="_blank" href="http://91aman.github.io/binaryClock/">Binary Clock</a> is a clock that displays the current time in the binary format.',
 	        link: 'http://91aman.github.io/binaryClock/',
 	        techkeys: ['React', 'css3', 'javascript', 'lodash', 'git', 'intellij']
 	    }
@@ -47007,7 +47007,7 @@
 	                    { className: 'link' },
 	                    _react2.default.createElement(
 	                        'a',
-	                        { target: '_blank', href: link },
+	                        { className: 'a_link', target: '_blank', href: link },
 	                        link
 	                    )
 	                ),
@@ -49611,7 +49611,7 @@
 
 
 	// module
-	exports.push([module.id, ".project-fs .psd-section {\n  width: 100%; }\n\n.project-fs .psd-sep {\n  width: 100px; }\n\n.project-fs .psdb {\n  color: #eee;\n  display: inline-block;\n  width: 50%;\n  padding: 20px;\n  box-sizing: border-box;\n  height: 100%;\n  overflow: auto; }\n\n.project-fs .psdb-image:not(:last-child) {\n  margin-bottom: 20px;\n  padding-bottom: 20px;\n  border-bottom: 2px solid #eee; }\n\n.project-fs .psdb-left {\n  border-right: 1px solid #eee; }\n\n.project-fs .psd-section {\n  height: 100%; }\n\n.project-fs .psd-body {\n  height: calc(100% - 100px); }\n\n.project-fs .psdb-right {\n  text-align: left;\n  font-weight: 100;\n  line-height: 30px;\n  font-size: 19px;\n  color: #999; }\n  .project-fs .psdb-right a {\n    color: #ddd;\n    text-decoration: none;\n    padding: 2px;\n    transition: all 500ms ease;\n    cursor: pointer; }\n    .project-fs .psdb-right a:hover {\n      background: #fff;\n      color: #444; }\n  .project-fs .psdb-right .link, .project-fs .psdb-right .tech {\n    margin: 20px 0; }\n\n.project-fs .slick-arrow {\n  height: 65px !important;\n  width: 65px !important;\n  fill: #eee !important;\n  top: 50%;\n  transform: translateY(-50%);\n  z-index: 1;\n  border-radius: 50%;\n  position: absolute; }\n  .project-fs .slick-arrow:hover {\n    fill: #444 !important;\n    background: #eee; }\n\n.project-fs .slick-next {\n  right: 30px; }\n\n.project-fs .slick-prev {\n  left: 30px; }\n\n.project-fs .psd-slider {\n  height: 100%; }\n\n.project-fs .slick-list {\n  height: 100%; }\n\n.project-fs .slick-dots {\n  bottom: 0; }\n\n.project-fs .slick-track {\n  height: 100%; }\n", ""]);
+	exports.push([module.id, ".project-fs .psd-section {\n  width: 100%; }\n\n.project-fs .psd-sep {\n  width: 100px; }\n\n.project-fs .psdb {\n  color: #eee;\n  display: inline-block;\n  width: 50%;\n  padding: 20px;\n  box-sizing: border-box;\n  height: 100%;\n  overflow: auto; }\n\n.project-fs .psdb-image:not(:last-child) {\n  margin-bottom: 20px;\n  padding-bottom: 20px;\n  border-bottom: 2px solid #eee; }\n\n.project-fs .psdb-left {\n  border-right: 1px solid #eee; }\n\n.project-fs .psd-section {\n  height: 100%; }\n\n.project-fs .psd-body {\n  height: calc(100% - 100px); }\n\n.project-fs .psdb-right {\n  text-align: left;\n  font-weight: 100;\n  line-height: 30px;\n  font-size: 19px;\n  color: #999; }\n  .project-fs .psdb-right .a_link {\n    color: #ddd;\n    text-decoration: none;\n    padding: 2px;\n    transition: all 500ms ease;\n    cursor: pointer; }\n    .project-fs .psdb-right .a_link:hover {\n      background: #fff;\n      color: #444; }\n  .project-fs .psdb-right .link, .project-fs .psdb-right .tech {\n    margin: 20px 0; }\n\n.project-fs .slick-arrow {\n  height: 65px !important;\n  width: 65px !important;\n  fill: #eee !important;\n  top: 50%;\n  transform: translateY(-50%);\n  z-index: 1;\n  border-radius: 50%;\n  position: absolute; }\n  .project-fs .slick-arrow:hover {\n    fill: #444 !important;\n    background: #eee; }\n\n.project-fs .slick-next {\n  right: 30px; }\n\n.project-fs .slick-prev {\n  left: 30px; }\n\n.project-fs .psd-slider {\n  height: 100%; }\n\n.project-fs .slick-list {\n  height: 100%; }\n\n.project-fs .slick-dots {\n  bottom: 0; }\n\n.project-fs .slick-track {\n  height: 100%; }\n", ""]);
 
 	// exports
 

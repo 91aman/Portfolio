@@ -38,7 +38,7 @@ const ProjectDetailComp = (projectDetails) => {
             <div className="psdb psdb-right">
                 <div className="desc" dangerouslySetInnerHTML={{__html: projectDetails.description}}/>
                 {link && <div className="link">
-                    <a target="_blank" href={link}>{link}</a>
+                    <a className="a_link" target="_blank" href={link}>{link}</a>
                 </div>
                 }
                 {techkeys && <div className="tech">
