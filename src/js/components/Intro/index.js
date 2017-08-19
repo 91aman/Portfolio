@@ -14,7 +14,7 @@ class Intro extends Component {
     render() {
         const {onSectionClick} = this.props;
         return (
-            <section className="h-full">
+            <section className="h-full intro-section">
                 <div className="intro-background">
                     <IntroBackgroundSvg/>
                 </div>
