@@ -24,10 +24,21 @@ export default {
     logo: 'src/img/technology/redux.png',
     url: 'http://redux.js.org/'
   },
-  backbone: {
-    label: 'Backbone',
-    logo: 'src/img/technology/backbone.png',
-    url: 'http://backbonejs.org/'
+  webpack: {
+    label: 'Webpack',
+    logo: 'src/img/technology/webpack.png',
+    url: 'https://webpack.github.io/'
+  },
+  requireJs: {
+    label: 'requirejs',
+    logo: 'src/img/technology/requirejs.png',
+    url: 'http://requirejs.org/'
+  },
+
+  jest: {
+    label: 'Jest',
+    logo: 'src/img/technology/jest.png',
+    url: 'https://jestjs.io/'
   },
   jQuery: {
     label: 'jQuery',
@@ -39,15 +50,10 @@ export default {
     logo: 'src/img/technology/lodash.png',
     url: 'https://lodash.com/'
   },
-  webpack: {
-    label: 'Webpack',
-    logo: 'src/img/technology/webpack.png',
-    url: 'https://webpack.github.io/'
-  },
-  requireJs: {
-    label: 'requirejs',
-    logo: 'src/img/technology/requirejs.png',
-    url: 'http://requirejs.org/'
+  backbone: {
+    label: 'Backbone',
+    logo: 'src/img/technology/backbone.png',
+    url: 'http://backbonejs.org/'
   },
   bootstrap: {
     label: 'Bootstrap',
@@ -94,10 +100,11 @@ export default {
     logo: 'src/img/technology/node.png',
     url: 'https://nodejs.org/en/'
   },
-  svn: {
-    label: 'subversion',
-    logo: 'src/img/technology/subversion.png',
-    url: 'https://subversion.apache.org/'
-  }
+  // svn: {
+  //   label: 'subversion',
+  //   logo: 'src/img/technology/subversion.png',
+  //   url: 'https://subversion.apache.org/'
+  // }
+
 
 };

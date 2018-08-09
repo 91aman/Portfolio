@@ -5,6 +5,21 @@
 
 
 export default {
+  sprinklr3: {
+    company: {
+      name: 'Sprinklr, Gurgaon',
+      logo: 'https://media.glassdoor.com/sqll/427532/sprinklr-squarelogo-1461344438537.png',
+      url: 'https://www.sprinklr.com/'
+    },
+    position: 'Lead Product Engineer.',
+    duration: 'June, 2017 - Present',
+    description: [
+      'Product owner of the Advertising module  of Sprinklr which accounts for more than 50 million USD revenue and is currently being used by more than 100k employees at Fortune 500 companies.',
+      'Worked closely with cross-functional development teams and played a leadership role in product architecture and design with a keen focus on product usability.',
+      'Promoted reliable and scalable code practice by encouraging team to do code reviews and write test cases to reduce dependency on manual testing and improve platform reliability and stability.',
+    ],
+    //description: 'Primary focus was Front-end development but also involved throughout entire project lifecycle from design to development. Developed Front-end for various modules like Reporting, Social Apps, Inspiration, Content Management, Paid. Worked as a core part of the development team, and was responsible for rolling out new features, improvements and fix existing issues.'
+  },
   sprinklr2: {
     company: {
       name: 'Sprinklr, Gurgaon',
@@ -12,10 +27,10 @@ export default {
       url: 'https://www.sprinklr.com/'
     },
     position: 'Senior Product Engineer.',
-    duration: 'Oct, 2016 - Present',
+    duration: 'Oct, 2016 - May, 2017',
     description: [
-      'Leading a team of 4 Engineers to build and maintain <a href="https://www.sprinklr.com/advertising/">Advertising module</a>. The application is currently being used by more than 60k employees at Fortune 500 companies',
-      'Migrated Advertising Module to the new Front-end Stack ( React, Redux, ES6 ) and worked closely with User Experience designers, Marketing team and Product team to develop various features for the module',
+      'Led a team of 10 Engineers to design and develop new Advertising module, which was acclaimed by Forrester wave 2017 for its exceptional UI and performance, helping Sprinklr emerge as a leader in market place.',
+      'Migrated Advertising Module to the new Front-end Stack ( React, Redux, ES6 ) and worked closely with User Experience designers, Marketing team and Product team to develop various features for the module.',
       'Experience in mentoring employees to implement important projects and guiding them till its completion',
     ],
     //description: 'Primary focus was Front-end development but also involved throughout entire project lifecycle from design to development. Developed Front-end for various modules like Reporting, Social Apps, Inspiration, Content Management, Paid. Worked as a core part of the development team, and was responsible for rolling out new features, improvements and fix existing issues.'

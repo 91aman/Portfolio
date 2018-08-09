@@ -25,13 +25,13 @@ class Intro extends Component {
                     <div className="intro-title anim-delay-3 fade-in">AMAN JAIN</div>
                     <hr className="intro-line-seperator anim-delay-5 fade-in"/>
                     <ul className="intro-list anim-delay-7 fade-in">
+                        {/*<li className="intro-list-item">*/}
+                            {/*CS &nbsp;*/}
+                            {/*<a className="link" href="http://www.daiict.ac.in/" target="_blank">@daiict</a></li>*/}
+                        {/*<li className="intro-list-item">·</li>*/}
                         <li className="intro-list-item">
-                            CS &nbsp;
-                            <a className="link" href="http://www.daiict.ac.in/" target="_blank">@daiict</a></li>
-                        <li className="intro-list-item">·</li>
-                        <li className="intro-list-item">
-                            Front-end developer &nbsp;
-                            <a className="link" href="https://www.sprinklr.com/" target="_blank">@sprinklr</a></li>
+                            Lead Front-end developer &nbsp;
+                            <a className="link" href="https://www.sprinklr.com/" target="_blank">@Sprinklr</a></li>
                     </ul>
                     <btn className="intro-btn anim-delay-9 fade-in" onClick={()=>onSectionClick(Sections['about'].key)}>
                         KNOW MORE

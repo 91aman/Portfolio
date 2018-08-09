@@ -7,9 +7,11 @@
 import React, {Component, PropTypes} from 'react';
 import WorkIcon from 'material-ui/lib/svg-icons/places/business-center';
 import Paper from 'material-ui/lib/paper';
-import castArray from 'lodash/castArray';
+//import castArray from 'lodash/castArray';
 import Style from './style.scss';
 import WorkConstants from './work';
+
+const castArray = value => Array.isArray(value) ? value : [value];
 
 class Experience extends Component {
   shouldComponentUpdate(nextProps, nextState, nextContext) {
